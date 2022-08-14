@@ -33,4 +33,6 @@ function checkRegex(string) {
 
 $input.addEventListener('keydown', e => e.key === 'Enter' && validate());
 document.querySelector('#validate').addEventListener('click', validate);
-document.querySelector('#regex').textContent = String(regex).substring(1, String(regex).length - 1);
+
+const regexStr = String(regex);
+document.querySelector('#regex').textContent = regexStr.substring(regexStr.indexOf('/') + 1, regexStr.lastIndexOf('/'));
