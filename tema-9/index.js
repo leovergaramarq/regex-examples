@@ -4,10 +4,9 @@ const $input = document.querySelector('#input');
 
 function validate() {
     console.log($input.value);
-    if($result.classList.contains('hidden')) $result.classList.remove('hidden');
     
     const $i = $result.querySelector('i');
-
+    
     if(checkRegex($input.value)) {
         if($i.classList.contains('fa-x')) {
             $i.classList.remove('fa-x');
@@ -19,6 +18,7 @@ function validate() {
             $i.classList.add('fa-x');
         }
     }
+    if($result.classList.contains('hidden')) $result.classList.remove('hidden');
 }
 
 function checkRegex(string) {

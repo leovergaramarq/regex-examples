@@ -1,24 +1,30 @@
-const regex = /^$/;
+const regex = /n([pb])/g;
 const $result = document.querySelector('#result');
 const $input = document.querySelector('#input');
+const $correction = document.querySelector('#correction');
 
 function validate() {
     console.log($input.value);
-    if($result.classList.contains('hidden')) $result.classList.remove('hidden');
     
     const $i = $result.querySelector('i');
-
-    if(checkRegex($input.value)) {
+    
+    if(!checkRegex($input.value)) {
         if($i.classList.contains('fa-x')) {
             $i.classList.remove('fa-x');
             $i.classList.add('fa-check');
         }
+        $input.style.borderBottomColor = 'greenyellow';
     } else {
         if($i.classList.contains('fa-check')) {
             $i.classList.remove('fa-check');
             $i.classList.add('fa-x');
         }
+        $input.style.borderBottomColor = 'red';
     }
+    $correction.value = $input.value.replaceAll(regex, 'm$1');
+    if($result.classList.contains('hidden')) $result.classList.remove('hidden');
+
+
 }
 
 function checkRegex(string) {

@@ -90,6 +90,16 @@ body {
     background-color: #252525;
     color: white;
 }
+#correction{
+    /* flex-grow: 1; */
+    height: 30px;
+    /* width: 90%; */
+    border: none;
+    border-bottom: 1px solid white;
+    text-align: center;
+    background-color: #252525;
+    color: white;
+}
 
 .solution button {
     height: 30px;
