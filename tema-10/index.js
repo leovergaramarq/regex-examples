@@ -21,17 +21,20 @@ function validate() {
         }
         $input.style.borderBottomColor = 'red';
     }
-    $correction.value = $input.value.replaceAll(regex, 'm$1');
+    $correction.textContent = $input.value.replaceAll(regex, 'm$1');
     if($result.classList.contains('hidden')) $result.classList.remove('hidden');
-
-
 }
 
 function checkRegex(string) {
     return regex.test(string);
 }
 
-$input.addEventListener('keydown', e => e.key === 'Enter' && validate());
+$input.addEventListener('keydown', e => {
+    if(e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        validate();
+    }
+});
 document.querySelector('#validate').addEventListener('click', validate);
 
 const regexStr = String(regex);

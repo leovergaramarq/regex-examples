@@ -33,9 +33,9 @@ body {
     border-radius: 20px;
 }
 
-.content > div {
-    /* padding: 10px; */
-}
+/* .content > div {
+    padding: 10px;
+} */
 
 .problem {
     width: 60%;
@@ -70,10 +70,12 @@ body {
     padding: 0 20px;
     width: 40%;
     text-align: center;
+    font-size: 16px;
 }
 
 .solution__input-section {
-    display: flex;
+    /* display: flex; */
+    position: relative;
 }
 
 #input::placeholder {
@@ -81,14 +83,15 @@ body {
 }
 
 #input {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     height: 30px;
-    /* width: 90%; */
+    width: 100%;
     border: none;
     border-bottom: 1px solid white;
     text-align: center;
     background-color: #252525;
     color: white;
+    font-size: 16px;
 }
 
 .solution button {
@@ -101,8 +104,10 @@ body {
 }
 
 #result {
-    padding: 7px 10px;
-    font-size: 16px;
+    right: 0;
+    position: absolute;
+    padding: 6px 10px;
+    font-size: 14px;
     height: min-content;
 }
 

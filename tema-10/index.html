@@ -27,10 +27,13 @@
         <div class="solution">
             <code id="regex"></code>
             <div class="solution__input-section">
-                <input type="text" id="input" placeholder="Ingrese el texto">
+                <!-- Text area -->
+                <textarea id="input" placeholder="Ingrese el texto" autofocus></textarea>
+                <!-- <input type="area" id="input" placeholder="Ingrese el texto"> -->
                 <span id="result" class="hidden"><i class="fa-solid fa-check"></i></span>
             </div>
-            <input type="text" id="correction" placeholder="Texto corregido" disabled>
+            <!-- <input type="text" id="correction" placeholder="Texto corregido" disabled> -->
+            <textarea id="correction" placeholder="Texto corregido" readonly></textarea>
             <button id="validate">Validar</button>
         </div>
     </div>
